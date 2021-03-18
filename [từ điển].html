@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>dictionary</h3>
+<input type="text" id="game" >
+<input type="button" id="dich" value="tìm" onclick="search()">
+</body>
+</html>
+<script>
+    var viet = ['nhà','xe','cây','hồ','gái','hoa'];
+    var anh = ['house','car','tree','lake','girl','flower'];
+    function search() {
+        var word = document.getElementById('game').value;
+        let viTriTrongMangViet = -1;
+        let viTriTrongMangAnh = -1;
+        for (var i = 0; i <viet.length; i++)
+        {
+            if (word === viet[i]){
+                viTriTrongMangViet = i;
+                break;
+            } else if (word === anh[i]){
+                viTriTrongMangAnh =i;
+                break;
+            }
+        }
+        if(viTriTrongMangViet != -1){
+            alert(anh[viTriTrongMangViet]);
+        }else if(viTriTrongMangAnh != -1){
+            alert(viet[viTriTrongMangAnh]);
+        }else {
+            alert("Nhap lai");
+        }
+    }
+
+</script>

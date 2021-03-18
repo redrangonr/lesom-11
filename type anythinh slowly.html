@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type annything slowly</title>
+</head>
+<body style="text-align: center">
+<h3><b>type anything slowly</b></h3>
+<textarea cols="100" rows="6" onkeyup="go()" id="text" ></textarea>
+</body>
+</html>
+<script>
+    var a = ["a"," hi"," hi"," "," đồ"," ngốc"];
+    var str= '';
+    var count = 0;
+    function go(){
+        str +=a[count];
+        if(count === a.length){
+            str = '';
+            count= -1;
+        }
+        document.getElementById("text").value= str;
+
+        count++;
+    }
+
+
+
+</script>
